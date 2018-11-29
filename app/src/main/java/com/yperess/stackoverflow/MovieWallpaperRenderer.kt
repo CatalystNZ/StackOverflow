@@ -129,8 +129,8 @@ class MovieWallpaperRenderer(
         val surfaceTexture = surfaceTexture ?: return
 
         if (isDirty) {
-            surfaceTexture.updateTexImage()
             isDirty = false
+            surfaceTexture.updateTexImage()
         }
 
         // No need to test or write depth, the screen quad has arbitrary depth, and is the only
